@@ -1,0 +1,20 @@
+<body>
+	<div class="easyui-layout" style="width: 100%; height: 100%;">
+		<div data-options="region:'south',split:true,border:false"
+			style="height: 50px; padding: 5px;">
+			<a class="easyui-linkbutton" data-options="iconCls:'icon-ok'"
+				href="javascript:void(0)" onclick="javascript:alert('ok')"
+				style="width: 80px">Ok</a> <a class="easyui-linkbutton"
+				data-options="iconCls:'icon-cancel'" href="javascript:void(0)"
+				onclick="closewindow()" style="width: 80px">Cancel</a>
+		</div>
+		<div
+			data-options="region:'center',title:'Main Title',iconCls:'icon-ok'"
+			style="padding: 5px;"></div>
+	</div>
+	<script type="text/javascript">
+		function closewindow() {
+			$('#modalwindow').window('close');
+		}
+	</script>
+</body>

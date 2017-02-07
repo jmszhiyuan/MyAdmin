@@ -1,0 +1,76 @@
+<#include "/view/common/layout.html"/> <@layout/>
+<script type="text/javascript" src="${ContextPath}/static/js/index.js"></script>
+</head>
+<body class="easyui-layout">
+	<div data-options="region: 'north'"
+		style="height: 50px; padding: 10px;">
+		<div id="north_left"
+			style="float: left; font-size: 18px; margin-right: 5px; padding-top: 1px;">
+			基于JFinal和EasyUI的后台管理系统</div>
+		<div id="north_right"
+			style="float: right; height: 26px; margin-right: 5px; padding-top: 1px;">
+			<a href="javascript:void(0);" class="easyui-menubutton"
+				data-options="menu:'#layout_north_set',iconCls:'icon-standard-cog'">系统</a>
+			<div id="layout_north_set">
+				<div id="btnUser" data-options="iconCls:'icon-hamburg-user'">个人信息</div>
+				<div id="btnExit" data-options="iconCls:'icon-hamburg-sign-out'">退出系统</div>
+			</div>
+		</div>
+	</div>
+	<div
+		data-options="region: 'west', title: '菜单导航', split: true, maxWidth: 200, minWidth: 100"
+		style="width: 140px;">
+		<div class="easyui-accordion" data-options="fit:true,border:false">
+			<div title="系统测试" style="padding: 5px;"
+				data-options="selected:true,border:false,iconCls:'icon-tip'">
+				<a class="easyui-linkbutton"
+					data-options="plain:true,iconCls:'icon-tip'"
+					style="margin-bottom: 5px; width: 100%;" href="javascript:void(0);"
+					onclick="loadhtml('用户管理','icon-tip','${ContextPath}/user')">用户管理</a> <a
+					class="easyui-linkbutton"
+					data-options="plain:true,iconCls:'icon-large-shapes'"
+					style="margin-bottom: 5px; width: 100%;" href="javascript:void(0);"
+					onclick="loadhtml('角色管理','icon-large-shapes','${ContextPath}/user')">角色管理</a> <a
+					class="easyui-linkbutton"
+					data-options="plain:true,iconCls:'icon-back'"
+					style="margin-bottom: 5px; width: 100%;" href="javascript:void(0);"
+					onclick="loadhtml('菜单管理','icon-back','${ContextPath}/menu')">菜单管理</a>
+			</div>
+			<div title="应用测试" style="padding: 5px;"
+				data-options="selected:false,border:false,iconCls:'icon-tip'">
+				<a class="easyui-linkbutton"
+					data-options="plain:true,iconCls:'icon-tip'"
+					style="margin-bottom: 5px; width: 100%;" href="javascript:void(0);"
+					onclick="loadhtml('应用测试','icon-tip','${ContextPath}/menu')">应用测试</a>
+			</div>
+		</div>
+	</div>
+	<div id="maincenter"
+		data-options="region:'center',title:'主页',href:'${ContextPath}/home',iconCls:'icon-hamburg-home',tools:[{iconCls:'icon-hamburg-home',handler:function(){loadhtml('主页','icon-hamburg-home','${ContextPath}/home');}}]"
+		style="padding: 10px"></div>
+
+	<div id="modalwindow" class="easyui-window" title="Modal Window"
+		data-options="modal:true,closed:true"
+		style="width: 500px; height: 200px; padding: 10px;"></div>
+
+	<div
+		data-options="region: 'east', title: '日历', iconCls: 'icon-standard-date', split: true,collapsed: true, maxWidth: 500"
+		style="width: 220px;">
+		<div id="eastLayout" class="easyui-layout"
+			data-options="fit: true, border:false">
+			<div data-options="region: 'north', split: false, border: false"
+				style="height: 220px;">
+				<div class="easyui-calendar" data-options="fit: true, border: false"></div>
+			</div>
+			<div id="linkPanel"
+				data-options="region: 'center', border: false, title: '通知', iconCls: 'icon-hamburg-link', tools: [{ iconCls: 'icon-hamburg-refresh', handler: function () { window.link.reload(); } }]">
+			</div>
+		</div>
+	</div>
+	<div data-options="region: 'south'"
+		style="height: 40px; padding: 10px;">
+		<div style="width: 100%;" align="center">&copy;2017 Jiamusi
+			University</div>
+	</div>
+</body>
+</html>

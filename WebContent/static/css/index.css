@@ -1,0 +1,21 @@
+.north {
+	height: 50px;
+	padding: 10px;
+}
+
+}
+.north_left {
+	float: left;
+	font-size: 18px;
+	margin-right: 5px;
+	padding-top: 1px;
+	text-align: left;
+}
+
+.north_right {
+	float: right;
+	height: 26px;
+	margin-right: 5px;
+	padding-top: 1px;
+	text-align: right;
+}
